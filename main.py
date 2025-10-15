@@ -99,7 +99,7 @@ def processar_pasta_local():
             texto = aplicar_ocr(filepath)
 
         resposta = chamar_openai(id_doc, texto)
-        dados_extraidos = process_text_fields(resposta)
+        dados_extraidos = process_text_fields(resposta, texto)
 
         dados_extraidos["id_documento"] = id_doc
         resultados.append(dados_extraidos)
