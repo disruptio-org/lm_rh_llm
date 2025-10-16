@@ -1,8 +1,0 @@
-openai>=1.0.0
-pytesseract
-pillow
-PyMuPDF
-pandas
-fastapi
-uvicorn
-python-dotenv
