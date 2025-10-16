@@ -1,0 +1,23 @@
+[project]
+name = "lm-rh-llm"
+version = "0.1.0"
+description = "End-to-end OpenAI Responses API integration for Leroy Merlin HR document processing"
+authors = [{ name = "Disruptio", email = "dev@disruptio.org" }]
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.30.0",
+    "python-dotenv>=1.0.1",
+    "typer>=0.12.3",
+    "pydantic>=2.7.0",
+    "pandas>=2.2.0",
+]
+
+[project.optional-dependencies]
+cli = ["typer[all]"]
+
+[project.scripts]
+lm-rh-llm = "lm_rh_llm.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
